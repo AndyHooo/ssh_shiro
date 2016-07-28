@@ -23,4 +23,10 @@ public class TestAction {
 	public void add(){
 		System.out.println("add");
 	}
+	
+	@Action(value = "query")
+	@RequiresPermissions("user:query")
+	public void query(){
+		System.out.println("query");
+	}
 }

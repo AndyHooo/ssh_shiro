@@ -11,7 +11,7 @@
 	<!-- 配置项目编码为utf-8,设定ssh的版本 -->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>3.0.5.RELEASE</spring.version>
+		<spring.version>4.0.2.RELEASE</spring.version>
 		<hibernate.version>3.6.5.Final</hibernate.version>
 		<struts2.version>2.3.24</struts2.version>
 	</properties>
@@ -45,6 +45,13 @@
 			<artifactId>spring-context</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>org.springframework</groupId>
@@ -157,6 +164,7 @@
 			<artifactId>aspectjweaver</artifactId>
 			<version>1.6.11</version>
 		</dependency>
+		<!-- 动态代理 -->
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
@@ -193,6 +201,12 @@
 			<groupId>org.apache.shiro</groupId>
 			<artifactId>shiro-all</artifactId>
 			<version>1.2.3</version>
+		</dependency>
+		<!-- 添加quartz，spring3 目前只能使用quartz1.8.5及以下版本 -->
+		<dependency>
+			<groupId>org.quartz-scheduler</groupId>
+			<artifactId>quartz</artifactId>
+			<version>2.2.1</version>
 		</dependency>
 	</dependencies>
 
