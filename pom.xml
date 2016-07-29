@@ -244,17 +244,30 @@
 
 	</build>
 	<!-- 制定下载仓库 -->
-	<distributionManagement>
+	<repositories>
 		<repository>
-			<id>nexus-releases</id>
-			<name>User Project Release</name>
-			<url>http://localhost:8088/nexus/content/repositories/releases/</url>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://127.0.0.1:8088/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
 		</repository>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>User Project SNAPSHOTS</name>
-			<url>http://localhost:8088/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
-	<artifactId>ssh_shiro</artifactId>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>nexus</id>
+			<name>nexus</name>
+			<url>http://127.0.0.1:8088/nexus/content/groups/public/</url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
